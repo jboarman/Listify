@@ -17,7 +17,7 @@ namespace ListifyWebAPI.Controllers
             if (begin == null || end == null || idx == null)
             {
                 string httpString = this.Request.IsHttps ? "https://" : "http://";
-                return new string[] { "Enter url as " + httpString + this.Request.Host  + "/listify?begin=x&end=x&idx=x", "replace the 'x' after each '=' with whatever values you want."  };
+                return new string[] { "Enter url as " + httpString + this.Request.Host  + "/listify?begin=x&end=x&idx=x", "replace the 'x' after each '=' with whatever values you want.", "Note, the 'end' parameter is actually representative of a length value. (e.g. if you put begin=100 and end=200 then the created list will be from 100-299)" };
             }
 
             Listify _list = new Listify();
